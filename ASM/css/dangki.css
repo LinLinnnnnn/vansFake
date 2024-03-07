@@ -1,0 +1,37 @@
+.img-banner *,
+.form-dangky * {
+    text-transform: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+.container-form label {
+    font-weight: 700;
+    font-size: 14px;
+
+}
+
+.form-control {
+    border-radius: 0;
+}
+
+.form-control::placeholder {
+    opacity: 0.8;
+    color: #acacac;
+    font-size: 13px;
+}
+
+.btn-50:hover {
+    background: #fff !important;
+    color: #e1182c !important;
+    border: #e1182c 1px solid;
+}
+
+.a-dang-nhap:hover {
+    color: #b81727 !important;
+    text-decoration: none !important;
+}
+
+.breadcrumb-item>a:hover {
+    color: #e1182c !important;
+}

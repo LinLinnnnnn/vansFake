@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sanpham.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrlMain">
+    <div class="offcanvas offcanvas-start " tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header ">
+            <div class="offcanvas-title text-white" id="offcanvasExampleLabel"></div>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body bg-dark p-0 w-100 ">
+            <nav class="navbar">
+                <div class="container">
+                    <ul class="navbar-nav w-100" id="accordion">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">all vans</a>
+                        </li>
+                        <li class="nav-item position-relative">
+                            <a class="nav-link">Shoes</a>
+                            <span class="open" data-bs-toggle="collapse" href="#demo1"><i
+                                    class="bi bi-plus-lg"></i></span>
+                            <ul class="dropdown-menu" id="demo1" class="collapse" data-bs-parent="#accordion">
+                                <li><a class="dropdown-item" href="#">Link</a></li>
+                                <li><a class="dropdown-item" href="#">Another link</a></li>
+                                <li><a class="dropdown-item" href="#">A third link</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">New arrivals</a>
+                        </li>
+                        <li class="nav-item position-relative">
+                            <a class="nav-link">Accessories</a>
+                            <span class="open" data-bs-toggle="collapse" href="#demo2"><i
+                                    class="bi bi-plus-lg"></i></span>
+                            <ul class="dropdown-menu" id="demo2" class="collapse" data-bs-parent="#accordion">
+                                <li><a class="dropdown-item" href="#">Link</a></li>
+                                <li><a class="dropdown-item" href="#">Another link</a></li>
+                                <li><a class="dropdown-item" href="#">A third link</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item position-relative">
+                            <a class="nav-link">Collections</a>
+                            <span class="open" data-bs-toggle="collapse" href="#demo3"><i
+                                    class="bi bi-plus-lg"></i></span>
+                            <ul class="dropdown-menu" id="demo3" class="collapse" data-bs-parent="#accordion">
+                                <li><a class="dropdown-item" href="#">Link</a></li>
+                                <li><a class="dropdown-item" href="#">Another link</a></li>
+                                <li><a class="dropdown-item" href="#">A third link</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sale off</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">size chart</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">LATEST VANS NEWS</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+    </div>
+    <header>
+        <div class="top-bar bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-md-7 col-sm-7 col-1">
+                        <div class="left-bar float-left">
+                            <ul class="nav">
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="#">mylinh.khanhhung@gmail.com</a>
+                                </li>
+                                <li class="nav-item ">
+                                    <p class="nav-link nav-link-disabled text-white  ">/</p>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link " href="#">0889456201</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-5 col-11">
+                        <div class="right-bar">
+                            <ul class="nav ">
+                                <li class="nav-item ">
+                                    <a class="nav-link " href="dangki.html">Đăng ký</a>
+                                </li>
+                                <li class="nav-item ">
+                                    <p class="nav-link nav-link-disabled text-white  ">/</p>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link " href="dangnhap.html">Đăng nhập</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="container">
+                <div class="row ">
+                    <nav class="navbar">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+                            <a class="navbar-brand" href="trangchu.html">
+                                <img src="img/logo.webp" alt="">
+                            </a>
+                        </div>
+                        <div class="col-lg-7 col-md-7 col-sm-3 col-3">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <div class="row ">
+                                        <nav class="navbar navbar-expand-lg position-relative ">
+                                            <button class="navbar-toggler text-end position-absolute " type="button"
+                                                data-toggle="collapse" data-target="#navbarTogglerDemo03"
+                                                aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                                                aria-label="Toggle navigation">
+
+                                                <a class="btn" data-bs-toggle="offcanvas" href="#offcanvasExample"
+                                                    role="button" aria-controls="offcanvasExample">
+                                                    <span class="navbar-toggler-icon"> </span></a>
+                                            </button>
+
+                                            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                                                <ul
+                                                    class="navbar-nav mr-auto nav-main flex-wrap justify-content-center">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#"><span>all vans</span></a>
+                                                    </li>
+                                                    <li class="nav-item dropdown">
+                                                        <a class="nav-link" href="#" role="button"
+                                                            data-bs-toggle="dropdown"><span>Shoes</span>
+                                                            <i class="bi bi-caret-down-fill"></i></a>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a class="dropdown-item" href="#">VANS CLASSIC </a></li>
+                                                            <li><a class="dropdown-item" href="#">VANS VAULT </a></li>
+                                                            <li><a class="dropdown-item" href="#">VANS OLD SKOOL</a>
+                                                            </li>
+                                                            <li><a class="dropdown-item" href="#">VANS SLIP-ON</a></li>
+                                                            <li><a class="dropdown-item" href="#">VANS AUTHENTIC</a>
+                                                            </li>
+                                                            <li><a class="dropdown-item" href="#">VANS SK8</a></li>
+                                                            <li><a class="dropdown-item" href="#">VANS ERA </a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link " href="#"><span>New arrivals</span></a>
+                                                    </li>
+                                                    <li class="nav-item dropdown">
+                                                        <a class="nav-link" href="#" role="button"
+                                                            data-bs-toggle="dropdown">
+                                                            <span>Accessories</span>
+                                                            <i class="bi bi-caret-down-fill"></i>
+                                                        </a>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a class="dropdown-item" href="#">BACKPACK </a></li>
+                                                            <li><a class="dropdown-item" href="#">VANS WALLET </a></li>
+                                                        </ul>
+                                                    </li>
+
+                                                    <li class="nav-item dropdown">
+                                                        <a class="nav-link" href="#" role="button"
+                                                            data-bs-toggle="dropdown"><span>Collections</span>
+                                                            <i class="bi bi-caret-down-fill"></i></a>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a class="dropdown-item" href="#">CLASSIC </a></li>
+                                                            <li><a class="dropdown-item" href="#">CHECKERBOARD </a></li>
+                                                            <li><a class="dropdown-item" href="#">KNU SKOOL </a></li>
+                                                            <li><a class="dropdown-item" href="#">VANS VR3 </a></li>
+                                                            <li><a class="dropdown-item" href="#">VANS FLORAL </a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link " href="#"><span>Sale off</span></a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link " href="#"><span>size chart</span></a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link " href="#"><span>About us</span></a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link " href="#"><span>LATEST VANS NEWS</span></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-3 col-3">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <div class=" group-cart d-flex justify-content-end d-inline">
+
+                                        <div ng-controller="boxSearchCtrl">
+                                            <div class="search-container" ng-mouseenter="showSearchBox = true"
+                                                ng-mouseleave="showSearchBox = false">
+                                                <i class="bi bi-search" style="font-size: 20px; width: 100%;"></i>
+                                                <div ng-show="showSearchBox" class="search-box">
+                                                    <input type="text" placeholder="Tìm kiếm..." class="text-lowercase">
+                                                    <!-- Các phần tử khác của box tìm kiếm nếu cần -->
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="search-container" ng-mouseenter="showSearchBox = true"
+                                            ng-mouseleave="showSearchBox = false">
+                                            <a href="#" alt="">
+                                                <i class="bi bi-bag-fill position-relative" style="font-size: 20px;">
+                                                    <span
+                                                        class="position-absolute top-0 start-100 p-1 translate-middle  bg-danger border border-light rounded-circle text-white"
+                                                        style="font-size: 10px;">
+                                                        99+
+                                                        <span class="visually-hidden"></span>
+                                                    </span>
+
+                                                </i>
+                                                <div ng-show="showSearchBox" class="search-box cart-box">
+                                                    <div class="cart-gr">
+                                                        <div class="cart-product" ng-repeat="pr in cart">
+                                                          <div class="m-1 row">
+                                                            <div class="col-5">
+                                                              <img src="img/{{pr.image}}" alt="Product Image">
+                                                            </div>
+                                                            <div class="col-7">
+                                                              <div class="cart-product-info ">
+                                                                <p>{{pr.name}}</p>
+                                                                <div class="cart-product-price text-danger">
+                                                                  {{pr.price -(pr.price * pr.discount / 100)
+                                                                  | number:0}}₫&nbsp;
+                                                                </div>
+                                                                <div class="cart-product-quantity">
+                                                                  <div class="quantity-input">
+                                                                    <button class="quantity-btn" ng-click="decreaseQuantity(pr)">-</button>
+                                                                    <input type="" id="quantity" name="quantity" class="quantity" min="1" value="{{pr.quantity}}">
+                                                                    <button class="quantity-btn" ng-click="increaseQuantity(pr)">+</button>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                        <hr>
+                            
+                                                        <div class="cart-product-total-price d-flex justify-content-between">
+                                                          <span style="text-transform: none !important; font-weight: 600;">Tổng cộng:</span>
+                                                          <span class="total-price" style="padding-right: 10px;">{{ calculateTotal() | number:0 }}₫</span>
+                                                        </div>
+                                                        <div class="cart-product-actions">
+                                                          <button class="btn-delete">Vỏ hàng </button>
+                                                          <button class="btn-update">Thanh toán</button>
+                                                        </div>
+                            
+                            
+                                                      </div>
+                                                    <div class="text-lowercase" ng-if="false">Không có sản phẩm trong vỏ</div>
+                                                    <!-- Các phần tử khác của box tìm kiếm nếu cần -->
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="img-banner">
+        <div class="container text-center">
+            <div class="row">
+                <p class="title-page">VANS NEW ARRIVALS</p>
+            </div>
+            <div class="row  ">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb d-flex justify-content-center">
+                        <li class="breadcrumb-item "><a href="trangchu.html" class="cl-main-2">Trang chủ</a></li>
+                        <li class="breadcrumb-item active cl-main" aria-current="page">VANS NEW ARRIVALS</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+    </div>
+    <section class="page-product" ng-controller="ctrlPageFilter">
+        <div class="container-1140">
+            <div class="block d-none">
+                <i class="bi bi-list-nested"></i>
+            </div>
+            <div class="hide">
+
+                <div class="row d-flex pb-3 justify-content-start ">
+                    <div class="select-type">
+                        <label>Danh mục:</label>
+                        <select ng-model="selectedCategory" ng-options="x for x in categoryOptions | uppercase"
+                            ng-change="applyFilter()" >
+                            <option value="" style="display:none;">Chọn</option>
+                        </select>
+
+                    </div>
+                    <div class="select-type">
+                        <label>Giảm giá:</label>
+                        <select ng-model="selectedSaleOff" ng-options="x for x in saleOffOptions"
+                            ng-change="applyFilter()">
+                            <option value="" style="display:none;">Chọn</option>
+
+                        </select>
+
+                    </div>
+                    <div class="select-type">
+                        <label>Giá:</label>
+                        <select ng-model="selectedPrice" ng-options="x.label for x in priceOptions"
+                            ng-change="applyFilter()">
+                            <option value="" style="display:none;">Chọn</option>
+                        </select>
+
+                    </div>
+
+                </div>
+            </div>
+            <div ng-if="noProductsFound" class="alert alert-warning">
+                Không có sản phẩm phù hợp với điều kiện đã chọn.
+            </div>
+        </div>
+
+
+        <div class="container-1140" ng-controller="myCtrl">
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 my-1" ng-repeat="pr in filteredProducts">
+                  
+                    <div class="card ">
+                        <div class="sale-right" ng-hide="{{pr.discount}} == 0">{{pr.discount}}%</div>
+                        <img src="img/{{pr.image}}" class="d-block w-100" alt="...">
+                        <button type="button" class="btn btn-detail text-white">Tùy chọn</button>
+                        <div class="card-body">
+                            <div class="box-img d-flex">
+                                <div class="picture-mini ">
+                                    <img src="img/{{pr.images[0]}}" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="picture-mini">
+                                    <img src="img/{{pr.images[1]}}" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="picture-mini">
+                                    <img src="img/{{pr.images[2]}}" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                            <h5 class="card-title text-truncate text-center name"><a href="">{{pr.name | uppercase}}</a>
+                            </h5>
+                            <p class="card-text text-center brand"><a href="">Vans</a></p>
+                            <p class="card-text text-center price">{{pr.price -(pr.price * pr.discount / 100) |
+                                number:0}}₫&nbsp;
+                                <span class="text-decoration-line-through text-black">{{pr.price | currency : "" :0}}₫
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- <ul class="pagination justify-content-center mt-5">
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a></li>
+            </ul> -->
+        </div>
+    </section>
+
+
+    <footer class="mt-5">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="box-email">
+                            <h3>Nhập email</h3>
+                            <span>Để nhận tin tức khuyến mãi từ cửa hàng của chúng tôi</span>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control input-email" placeholder="Nhập email"
+                                aria-label="Nhập email của bạn" aria-describedby="button-addon2">
+                            <button class="btn" type="button" id="button-addon2">Gửi ngay</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-middle">
+            <div class="container px-3">
+                <div class="row">
+                    <div class="col-lg-1 col-md-1 col-sm-1"></div>
+                    <div class="col-lg-10 col-md-10 col-sm-10">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <nav class="navbar">
+                                    <div class="container">
+                                        <h6>Trải Nghiệm VANS Store Ngay Tại Nhà</h6>
+                                        <ul class="navbar-nav w-100">
+                                            <li class="nav-item ">
+                                                <a class="nav-link" href="#">Hệ Thống VANS Online</a>
+                                            </li>
+                                            <li class="nav-item ">
+                                                <a class="nav-link" href="#">Địa chỉ: Hồ Chí Minh</a>
+                                            </li>
+                                            <li class="nav-item ">
+                                                <a class="nav-link" href="#">Hotline: 0866956907</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </nav>
+
+
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                        <nav class="navbar">
+                                            <div class="container">
+                                                <h6>Chính Sách</h6>
+
+                                                <ul class="navbar-nav w-100">
+                                                    <li class="nav-item ">
+                                                        <a class="nav-link" href="#">Chính sách thanh toán</a>
+                                                    </li>
+                                                    <li class="nav-item ">
+                                                        <a class="nav-link" href="#">Chính sách đổi trả</a>
+                                                    </li>
+                                                    <li class="nav-item ">
+                                                        <a class="nav-link" href="#">Chính sách bảo hành</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                        <nav class="navbar">
+                                            <div class="container">
+                                                <h6>Về Chúng Tôi</h6>
+
+                                                <ul class="navbar-nav w-100">
+                                                    <li class="nav-item ">
+                                                        <a class="nav-link" href="#">About Us</a>
+                                                    </li>
+                                                    <li class="nav-item ">
+                                                        <a class="nav-link" href="#">Size Chart</a>
+                                                    </li>
+                                                    <li class="nav-item ">
+                                                        <a class="nav-link" href="#">ZALO Business: 0866956907</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-sm-1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row tablet">
+                    <div id="copyright" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 a-center fot_copyright">
+                        <span class="text-none">
+                            <span class="mobile">&copy; Bản quyền thuộc về <b>VANS Việt Nam</b><span class="hidden-xs">
+                                    |
+                                </span></span>
+                            <span class="opacity1">Cung cấp bởi</span>
+                            <a href="#" previewlistener="true">VANS</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+</body>
+<script src="js/main.js"></script>
+<script>
+    app.controller('myCtrl', function ($scope, $http, $rootScope, $q) {
+
+
+        $rootScope.product_full = [];
+
+        var loadData = function () {
+            var deferred = $q.defer();
+
+            $http.get('http://localhost:3000/product_full')
+                .then(function (response) {
+                    $rootScope.product_full = response.data;
+                    console.log("Data loaded:", $rootScope.product_full);
+                    deferred.resolve();
+                })
+                .catch(function (error) {
+                    console.error('Lỗi khi tải dữ liệu(full):', error);
+                    deferred.reject(error);
+                });
+
+            return deferred.promise;
+        };
+
+        loadData().then(function () {
+            // Gọi hàm khởi tạo giá trị mặc định sau khi dữ liệu đã được tải
+            $scope.initializeFilters();
+            console.log($scope.filteredProducts);
+        });
+
+    });
+
+
+    app.controller('ctrlPageFilter', function ($scope, $rootScope) {
+        $scope.noProductsFound = false;
+
+        $scope.categoryOptions = ["All", "classic", "new-arrivals"];
+        $scope.priceOptions = [
+            { label: 'Tất cả giá', value: 0 },
+            { label: '500 trở lên', value: 500000 },
+            { label: '1 triệu trở lên', value: 1000000 },
+            { label: '1 triệu 500 trở lên', value: 1500000 }
+        ];
+        $scope.saleOffOptions = ["All",5, 10, 15, 20, 25];
+
+        $scope.initializeFilters = function () {
+            $scope.selectedCategory = "All";
+            $scope.selectedSaleOff = "All";
+            $scope.selectedPrice = $scope.priceOptions[0]; // Chọn giá trị mặc định, có thể là "Tất cả giá" hoặc giá trị đầu tiên trong mảng
+            $scope.filteredProducts = $rootScope.product_full;
+            $scope.noProductsFound = false;
+        };
+  
+
+        $scope.applyFilter = function () {
+            // Lọc theo danh mục
+            if ($scope.selectedCategory === "All" || !$scope.selectedCategory) {
+                $scope.filteredProducts = $rootScope.product_full;
+            } else {
+                $scope.filteredProducts = $rootScope.product_full.filter(function (pr) {
+                    return pr.category === $scope.selectedCategory;
+                });
+            }
+
+            // Lọc theo giảm giá
+
+            if ($scope.selectedSaleOff !== undefined) {
+                $scope.filteredProducts = $scope.filteredProducts.filter(function (pr) {
+                    return $scope.selectedSaleOff === "All" || pr.discount === $scope.selectedSaleOff;
+                });
+            }
+
+            // Lọc theo giá tiền
+            if ($scope.selectedPrice && $scope.selectedPrice.value) {
+                $scope.filteredProducts = $scope.filteredProducts.filter(function (pr) {
+                    return $scope.selectedPrice.label === "Tất cả giá" || (pr.price - (pr.price * pr.discount / 100) >= $scope.selectedPrice.value);
+                });
+            }
+            $scope.noProductsFound = ($scope.filteredProducts.length === 0);
+        };
+
+
+    });
+
+</script>
+
+</html>

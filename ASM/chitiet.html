@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chitiet.css">
+</head>
+
+<body ng-app="myApp" ng-controller="ctrlDetailPage">
+    <div class="offcanvas offcanvas-start " tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header ">
+            <div class="offcanvas-title text-white" id="offcanvasExampleLabel"></div>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body bg-dark p-0 w-100 ">
+            <nav class="navbar">
+                <div class="container">
+                    <ul class="navbar-nav w-100" id="accordion">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">all vans</a>
+                        </li>
+                        <li class="nav-item position-relative">
+                            <a class="nav-link">Shoes</a>
+                            <span class="open" data-bs-toggle="collapse" href="#demo1"><i
+                                    class="bi bi-plus-lg"></i></span>
+                            <ul class="dropdown-menu" id="demo1" class="collapse" data-bs-parent="#accordion">
+                                <li><a class="dropdown-item" href="#">Link</a></li>
+                                <li><a class="dropdown-item" href="#">Another link</a></li>
+                                <li><a class="dropdown-item" href="#">A third link</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">New arrivals</a>
+                        </li>
+                        <li class="nav-item position-relative">
+                            <a class="nav-link">Accessories</a>
+                            <span class="open" data-bs-toggle="collapse" href="#demo2"><i
+                                    class="bi bi-plus-lg"></i></span>
+                            <ul class="dropdown-menu" id="demo2" class="collapse" data-bs-parent="#accordion">
+                                <li><a class="dropdown-item" href="#">Link</a></li>
+                                <li><a class="dropdown-item" href="#">Another link</a></li>
+                                <li><a class="dropdown-item" href="#">A third link</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item position-relative">
+                            <a class="nav-link">Collections</a>
+                            <span class="open" data-bs-toggle="collapse" href="#demo3"><i
+                                    class="bi bi-plus-lg"></i></span>
+                            <ul class="dropdown-menu" id="demo3" class="collapse" data-bs-parent="#accordion">
+                                <li><a class="dropdown-item" href="#">Link</a></li>
+                                <li><a class="dropdown-item" href="#">Another link</a></li>
+                                <li><a class="dropdown-item" href="#">A third link</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sale off</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">size chart</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">LATEST VANS NEWS</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+    </div>
+    <header>
+        <div class="top-bar bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-md-7 col-sm-7 col-1">
+                        <div class="left-bar float-left">
+                            <ul class="nav">
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="#">mylinh.khanhhung@gmail.com</a>
+                                </li>
+                                <li class="nav-item ">
+                                    <p class="nav-link nav-link-disabled text-white  ">/</p>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link " href="#">0889456201</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-5 col-11">
+                        <div class="right-bar">
+                            <ul class="nav ">
+                                <li class="nav-item ">
+                                    <a class="nav-link " href="dangki.html">Đăng ký</a>
+                                </li>
+                                <li class="nav-item ">
+                                    <p class="nav-link nav-link-disabled text-white  ">/</p>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link " href="dangnhap.html">Đăng nhập</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="container">
+                <div class="row ">
+                    <nav class="navbar">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+                            <a class="navbar-brand" href="trangchu.html">
+                                <img src="img/logo.webp" alt="">
+                            </a>
+                        </div>
+                        <div class="col-lg-7 col-md-7 col-sm-3 col-3">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <div class="row ">
+                                        <nav class="navbar navbar-expand-lg position-relative ">
+                                            <button class="navbar-toggler text-end position-absolute " type="button"
+                                                data-toggle="collapse" data-target="#navbarTogglerDemo03"
+                                                aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                                                aria-label="Toggle navigation">
+
+                                                <a class="btn" data-bs-toggle="offcanvas" href="#offcanvasExample"
+                                                    role="button" aria-controls="offcanvasExample">
+                                                    <span class="navbar-toggler-icon"> </span></a>
+                                            </button>
+
+                                            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                                                <ul
+                                                    class="navbar-nav mr-auto nav-main flex-wrap justify-content-center">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#"><span>all vans</span></a>
+                                                    </li>
+                                                    <li class="nav-item dropdown">
+                                                        <a class="nav-link" href="#" role="button"
+                                                            data-bs-toggle="dropdown"><span>Shoes</span>
+                                                            <i class="bi bi-caret-down-fill"></i></a>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a class="dropdown-item" href="#">VANS CLASSIC </a></li>
+                                                            <li><a class="dropdown-item" href="#">VANS VAULT </a></li>
+                                                            <li><a class="dropdown-item" href="#">VANS OLD SKOOL</a>
+                                                            </li>
+                                                            <li><a class="dropdown-item" href="#">VANS SLIP-ON</a></li>
+                                                            <li><a class="dropdown-item" href="#">VANS AUTHENTIC</a>
+                                                            </li>
+                                                            <li><a class="dropdown-item" href="#">VANS SK8</a></li>
+                                                            <li><a class="dropdown-item" href="#">VANS ERA </a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link " href="#"><span>New arrivals</span></a>
+                                                    </li>
+                                                    <li class="nav-item dropdown">
+                                                        <a class="nav-link" href="#" role="button"
+                                                            data-bs-toggle="dropdown">
+                                                            <span>Accessories</span>
+                                                            <i class="bi bi-caret-down-fill"></i>
+                                                        </a>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a class="dropdown-item" href="#">BACKPACK </a></li>
+                                                            <li><a class="dropdown-item" href="#">VANS WALLET </a></li>
+                                                        </ul>
+                                                    </li>
+
+                                                    <li class="nav-item dropdown">
+                                                        <a class="nav-link" href="#" role="button"
+                                                            data-bs-toggle="dropdown"><span>Collections</span>
+                                                            <i class="bi bi-caret-down-fill"></i></a>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a class="dropdown-item" href="#">CLASSIC </a></li>
+                                                            <li><a class="dropdown-item" href="#">CHECKERBOARD </a></li>
+                                                            <li><a class="dropdown-item" href="#">KNU SKOOL </a></li>
+                                                            <li><a class="dropdown-item" href="#">VANS VR3 </a></li>
+                                                            <li><a class="dropdown-item" href="#">VANS FLORAL </a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link " href="#"><span>Sale off</span></a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link " href="#"><span>size chart</span></a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link " href="#"><span>About us</span></a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link " href="#"><span>LATEST VANS NEWS</span></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-3 col-3">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <div class=" group-cart d-flex justify-content-end d-inline">
+
+                                        <div ng-controller="boxSearchCtrl">
+                                            <div class="search-container" ng-mouseenter="showSearchBox = true"
+                                                ng-mouseleave="showSearchBox = false">
+                                                <i class="bi bi-search" style="font-size: 20px; width: 100%;"></i>
+                                                <div ng-show="showSearchBox" class="search-box">
+                                                    <input type="text" placeholder="Tìm kiếm..." class="text-lowercase">
+                                                    <!-- Các phần tử khác của box tìm kiếm nếu cần -->
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="search-container" ng-mouseenter="showSearchBox = true"
+                                            ng-mouseleave="showSearchBox = false">
+                                            <a href="#" alt="">
+                                                <i class="bi bi-bag-fill position-relative" style="font-size: 20px;">
+                                                    <span
+                                                        class="position-absolute top-0 start-100 p-1 translate-middle  bg-danger border border-light rounded-circle text-white"
+                                                        style="font-size: 10px;">
+                                                        99+
+                                                        <span class="visually-hidden"></span>
+                                                    </span>
+
+                                                </i>
+                                                <div ng-show="showSearchBox" class="search-box cart-box">
+                                                    <div class="text-lowercase">Không có sản phẩm trong vỏ</div>
+                                                    <!-- Các phần tử khác của box tìm kiếm nếu cần -->
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="img-banner mb-5">
+        <div class="container text-center">
+            <div class="row">
+                <p class="title-page">VANS Việt Nam | Giày VANS AUTHENTIC X DISNEY 100 OG FAMILY VN0009PV448</p>
+            </div>
+            <div class="row">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb d-flex justify-content-center">
+                        <li class="breadcrumb-item "><a href="trangchu.html" class="cl-main-2">Trang chủ</a></li>
+                        <li class="breadcrumb-item "><a href="trangchu.html" class="cl-main-2">Sale Of 10% </a></li>
+                        <li class="breadcrumb-item active cl-main" aria-current="page"> Giày VANS AUTHENTIC X DISNEY 100
+                            OG FAMILY MULTI</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <section class="page-detail">
+        <div class="container ">
+            <div class="row mt-5 pt-2">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                    <div class="img-detail" style="border: 1px solid rgb(220, 220, 220);">
+                        <img src="img/main-001.jpg" alt="">
+                    </div>
+                    <div class="img-mini d-flex justify-content-center mb-5 mt-1">
+
+                        <div class="picture-mini " style="border: 1px solid rgb(220, 220, 220);">
+                            <img src="img/001-1.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="picture-mini " style="border: 1px solid rgb(220, 220, 220);">
+                            <img src="img/001-2.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="picture-mini " style="border: 1px solid rgb(220, 220, 220);">
+                            <img src="img/001-3.jpg" class="d-block w-100" alt="...">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                    <div class="product-detail px-3">
+                        <h1 class="product-name">VANS AUTHENTIC CLASSIC BLACK/WHITE</h1>
+                        <div class="group-status ">
+                            <span class="first_status">Thương hiệu: <span class="status_name"
+                                    style="color: green;">VANS</span></span>
+                            <span class="line_tt" style="margin: 0 5px;">/</span>
+                            <span class="first_status sku-product">
+                                Mã sản phẩm: <span class="variant-sku" style="color: green;" itemprop="sku"
+                                    content="VN000EE3BLK">VN000EE3BLK</span>
+                            </span>
+                            <hr class="mt-5">
+                        </div>
+
+
+                        <span class="product-price pt-2 pb-5">1.450.000₫</span>
+                        <h4>Size:</h4>
+                        <div class="product-size d-flex flex-wrap justify-content-center">
+                            <div class="btn-size" ng-repeat="size in sizes">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                    id="inlineRadio{{size.value}}" ng-model="selectedSize" ng-value="size.value">
+                                <label class="form-check-label" for="inlineRadio{{size.value}}">{{size.label}}</label>
+                            </div>
+                        </div>
+                        <div class="number-add mt-3 mb-2 d-flex flex-wrap justify-content-center">
+                            <div class="p-2">
+                                <input type="number" name="" id="" min="1" value="1" step="1">
+                            </div>
+                            <div class="p-2">
+                                <button data-bs-toggle="modal" data-bs-target="#modal-checkout"
+                                    class="custom-btn btn-5 fs-4"><span>Mua ngay</span></button>
+                            </div>
+                            <hr class=py-2">
+                        </div>
+                        <div class="support-product ">
+                            <p class="hotline_product fw-bold fs-5">Tư vấn:
+                                <a class="sdt-hotline cl-main fw-bold" href="tel:0866956907">0889456201</a>
+                            </p>
+                            <p>
+                                <span> <a class="size-chart fw-bold text-primary" href="#">SIZE CHART</a></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <section class="top3-product pb-5">
+            <div class="container">
+                <h2 class="title-head text-center">
+                    <a href="#">Top 4 lượt bán
+                    </a>
+                </h2>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-12" ng-repeat="pr in top_product  | limitTo:4:0">
+                        <div class="card">
+                            <div class="sale-right" ng-hide="{{pr.discount}} == 0">{{pr.discount}}%</div>
+                            <img src="img/{{pr.image}}" class="d-block w-100 " id="main-img" alt="...">
+                            <button type="button" class="btn btn-detail text-white">Tùy chọn</button>
+                            <div class="card-body">
+                                <div class="box-img d-flex">
+                                    <div class="picture-mini ">
+                                        <img src="img/{{pr.images[0]}}" on-click="click_img(this)" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="picture-mini">
+                                        <img src="img/{{pr.images[1]}}" on-click="click_img(this)" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="picture-mini">
+                                        <img src="img/{{pr.images[2]}}" on-click="click_img(this)" class="d-block w-100" alt="...">
+                                    </div>
+                                </div>
+                                <h5 class="card-title text-truncate text-center name"><a href="">{{pr.name |
+                                        uppercase}}</a>
+                                </h5>
+                                <p class="card-text text-center brand"><a href="">Vans</a></p>
+
+                                <p class="card-text text-center price">{{pr.price -(pr.price * pr.discount / 100) |
+                                    number:0}}₫&nbsp;
+                                    <span class="text-decoration-line-through text-black">{{pr.price | currency : ""
+                                        :0}}₫
+                                    </span>
+                                </p>
+                                <p class="card-text text-end brand text-italy text-secondary"><small
+                                        style="font-size: 10px;"><em>Đã bán: {{pr.wbuy}} lượt</em></small></p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <div class="page-content">
+            <div class="container">
+                <div class="row mt-5 ">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <a href=""><img src="img/bg_product_col.webp" alt=""></a>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 tab-container">
+                        <div class="tab-btn d-flex justify-content-center ">
+                            <ul class="nav nav-pills d-flex justify-content-center" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-bs-toggle="pill" href="#info">Thông tin sản phẩm</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-bs-toggle="pill" href="#size">Cách đo size Vans</a>
+                                </li>
+                            </ul>
+
+
+                        </div>
+                        <div class="container px-5">
+                            <div class="tab-content">
+                                <div id="info" class="container tab-pane active"><br>
+                                    <div class="product_getcontent">
+
+                                        <p style="text-align: justify;"><span style="color:#000000;"><span
+                                                    style="font-family:Arial,Helvetica,sans-serif;"><span
+                                                        style="font-size:14px;">Khi thế giới ngày càng phát triển hơn về
+                                                        mọi mặt, thời trang cũng vì thế mà không ngừng tiến bước về phía
+                                                        trước. Nhưng! Tất cả những cái mới đều được xây dựng dựa trên
+                                                        một thứ gọi là NỀN TẢNG. Và dĩ nhiên, <b>VANS</b> được cộng đồng
+                                                        thể thao biết đến như một thương hiệu thời trang chuyên về giày
+                                                        dành cho các bộ môn nghệ thuật đường phố, nổi bật là trượt ván.
+                                                        Với chiều dài hoạt động chuyên môn hơn 50 năm trong ngành thời
+                                                        trang may mặc, thương hiệu được sáng lập bởi một nghệ nhân giày
+                                                        - ông Paul Van Doren vào năm 1966. <b>VANS</b> được đặt trụ sở
+                                                        đầu tiên tại Anaheim, California, Mỹ và hoạt động cho đến ngày
+                                                        nay.&nbsp;<b>VANS AUTHENTIC</b> là một trong những sản phẩm xung
+                                                        phong đầu tiên, mở đầu cho một con đường tiếp nối đam mê của một
+                                                        thương hiệu giày vươn tầm thế giới. Và khi mà cái cũng cùng cái
+                                                        mới giao thoa kết hợp cùng với sự tinh tế và sự cố gắng không
+                                                        ngừng phá bỏ giới hạn của nhà <b>OFF THE WALL</b>, một tinh hoa
+                                                        đã của làng Sneaker đã ra đời<span
+                                                            style="line-height:1;">&nbsp;được ra mắt sớm nhất từ năm
+                                                            1966 với tên gọi <strong>VANS #44</strong>,&nbsp;được trang
+                                                            bị&nbsp;đế cao su độ bám tốt cho những môn thể thao mạo hiểm
+                                                            như trượt ván, BMX v.v..., upper vải <em>canvas </em>cao
+                                                            cấp,&nbsp;phong cách cổ điển&nbsp;hợp với cả nam lẫn
+                                                            nữ.</span></span></span></span></p>
+                                        <p style="text-align: justify;"><span style="color:#000000;"><span
+                                                    style="font-family:Arial,Helvetica,sans-serif;"><span
+                                                        style="font-size:14px;"><img data-thumb="original"
+                                                            original-height="1002" original-width="1002"
+                                                            src="//bizweb.dktcdn.net/100/140/774/products/vans-authentic-classic-black-vn000ee3blk-2.png?v=1625925620597"></span></span></span>
+                                        </p>
+                                        <p style="text-align: justify;"><span style="color:#000000;"><span
+                                                    style="font-family:Arial,Helvetica,sans-serif;"><span
+                                                        style="font-size:14px;"><strong><span
+                                                                style="line-height:1;">VANS CLASSIC AUTHENTIC
+                                                                BLACK/WHITE:</span></strong></span></span></span></p>
+                                        <p style="text-align: justify;"><span style="color:#000000;"><span
+                                                    style="font-family:Arial,Helvetica,sans-serif;"><span
+                                                        style="font-size:14px;"><span style="line-height:1;">Là phiên
+                                                            bản được ưa chuộng nhất trong bộ sưu tập
+                                                            <strong>Authentic</strong> của
+                                                            <strong>VANS</strong>&nbsp;với sự kết hợp 2 màu đen trắng dễ
+                                                            phối đồ và custom, đặc biệt là phiên bản cổ nhất có tuổi đời
+                                                            hơn 50 năm, dù vậy vẫn được fan hâm mộ săn đón và được sử
+                                                            dụng khá nhiều với những vận động viên trượt ván chuyên
+                                                            nghiệp.&nbsp;</span><strong><span
+                                                                style="line-height:1;">VANS CLASSIC AUTHENTIC
+                                                                BLACK/WHITE </span></strong><span
+                                                            style="line-height:1;">được đánh giá là một siêu phẩm cần có
+                                                            khi bạn quyết định sẽ trở thành một tín đồ của nhà
+                                                            <strong>VANS </strong>đấy!</span></span></span></span></p>
+                                        <p style="text-align: justify;"><span style="color:#000000;"><span
+                                                    style="font-family:Arial,Helvetica,sans-serif;"><span
+                                                        style="font-size:14px;"><img data-thumb="original"
+                                                            original-height="1002" original-width="1002"
+                                                            src="//bizweb.dktcdn.net/100/140/774/products/vans-authentic-classic-black-vn000ee3blk-3.png?v=1625925623543"></span></span></span>
+                                        </p>
+                                        <p style="text-align: justify;"><span style="color:#000000;"><span
+                                                    style="font-family:Arial,Helvetica,sans-serif;"><span
+                                                        style="font-size:14px;"><img data-thumb="original"
+                                                            original-height="1002" original-width="1002"
+                                                            src="//bizweb.dktcdn.net/100/140/774/products/vans-authentic-classic-black-vn000ee3blk-4.png?v=1625925626347"></span></span></span>
+                                        </p>
+                                        <p style="text-align: justify;"><span style="color:#000000;"><span
+                                                    style="font-family:Arial,Helvetica,sans-serif;"><span
+                                                        style="font-size:14px;"><img data-thumb="original"
+                                                            original-height="1059" original-width="1059"
+                                                            src="//bizweb.dktcdn.net/100/140/774/products/vans-authentic-classic-black-vn000ee3blk-1.png?v=1625925617317"></span></span></span>
+                                        </p>
+                                        <p style="text-align: justify;"><span style="color:#000000;"><span
+                                                    style="font-family:Arial,Helvetica,sans-serif;"><span
+                                                        style="font-size:14px;"><img data-thumb="original"
+                                                            original-height="1002" original-width="1002"
+                                                            src="//bizweb.dktcdn.net/100/140/774/products/vans-authentic-classic-black-vn000ee3blk-5.png?v=1625925629497"></span></span></span>
+                                        </p>
+                                        <p style="text-align: justify;">&nbsp;</p>
+                                        <p style="text-align: justify;">&nbsp;</p>
+                                        <p style="text-align: justify;">&nbsp;</p>
+                                        <p style="text-align: justify;">&nbsp;</p>
+
+                                    </div>
+                                </div>
+                                <div id="size" class="container tab-pane fade"><br>
+                                    <div class="content-size">
+                                        <p style="text-align: justify;"><u><strong>Các bước kiểm tra size giày
+                                                    VANS:</strong></u></p>
+                                        <p style="text-align: justify;"><span
+                                                style="font-family:Arial,Helvetica,sans-serif;"><span
+                                                    style="font-size:14px;"><strong><span style="color:#c0392b;"><u>Bước
+                                                                1</u>:</span></strong> Chuẩn bị một tờ giấy và đặt chân
+                                                    lên tờ giấy đó.</span></span></p>
+                                        <p style="text-align: justify;"><span
+                                                style="font-family:Arial,Helvetica,sans-serif;"><span
+                                                    style="font-size:14px;"><strong><span style="color:#c0392b;"><u>Bước
+                                                                2</u>:</span> </strong>Vẽ gót chân và mũi chân lên tờ
+                                                    giấy.</span></span></p>
+                                        <p style="text-align: justify;"><span
+                                                style="font-family:Arial,Helvetica,sans-serif;"><span
+                                                    style="font-size:14px;"><strong><span style="color:#c0392b;"><u>Bước
+                                                                3</u>:</span> </strong>Kẻ 1 đường từ đầu gót chân đến
+                                                    đầu ngón dài nhất như hình&nbsp;(lưu ý: sử dụng ngón chân dài nhất
+                                                    vì một số người dài ngón cái, một số người dài ngón giữa
+                                                    v.v...)</span></span></p>
+                                        <p style="text-align: justify;"><span
+                                                style="font-family:Arial,Helvetica,sans-serif;"><span
+                                                    style="font-size:14px;"><strong><span style="color:#c0392b;"><u>Bước
+                                                                4</u>:&nbsp;</span></strong>Đo chiều dài đường thẳng vừa
+                                                    kẻ và so sánh với mục Cm&nbsp;của bảng size.</span></span></p>
+                                        <p style="text-align: center;"><img data-thumb="original" original-height="518"
+                                                original-width="900"
+                                                src="//bizweb.dktcdn.net/100/140/774/files/bang-size-vans-chuan-nhat-1.jpg?v=1626244976740">
+                                        </p>
+                                        <p style="text-align: justify;"><span
+                                                style="font-family:Arial,Helvetica,sans-serif;"><span
+                                                    style="font-size:14px;"><span
+                                                        style="color:#c0392b;"><strong><em><u>Lưu
+                                                                    ý</u>:</em></strong></span><span
+                                                        style="color:#d35400;"><strong><em>
+                                                            </em></strong></span></span></span><span
+                                                style="font-family:Arial,Helvetica,sans-serif;"><span
+                                                    style="font-size:14px;">Mỗi hãng thể thao có mỗi bảng size khác
+                                                    nhau, không áp dụng size của hãng khác vào hãng
+                                                    <em><strong>VANS</strong></em>.</span></span></p>
+                                        <p style="text-align: justify;"><span
+                                                style="font-family:Arial,Helvetica,sans-serif;"><span
+                                                    style="font-size:14px;">Những sản phẩm thuộc <strong><em>VANSVN</em>
+                                                    </strong>phân phối sẽ có những yếu tố sau đây:</span></span></p>
+                                        <p style="text-align: center;"><span
+                                                style="font-family:Arial,Helvetica,sans-serif;"><span
+                                                    style="font-size:14px;"><img data-thumb="original"
+                                                        original-height="450" original-width="900"
+                                                        src="//bizweb.dktcdn.net/100/140/774/files/vans-vinh-quang-minh.jpg?v=1626767992769"></span></span>
+                                        </p>
+                                        <p style="text-align: justify;"><span
+                                                style="font-family:Arial,Helvetica,sans-serif;"><span
+                                                    style="font-size:14px;">Những sản phẩm không có phiếu bảo hành, tag
+                                                    độc quyền v.v... chúng tôi sẽ không chịu trách nhiệm cho sản phẩm
+                                                    đó</span></span></p>
+                                        <p style="text-align: justify;">&nbsp;</p>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="mt-5">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="box-email">
+                            <h3>Nhập email</h3>
+                            <span>Để nhận tin tức khuyến mãi từ cửa hàng của chúng tôi</span>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control input-email" placeholder="Nhập email"
+                                aria-label="Nhập email của bạn" aria-describedby="button-addon2">
+                            <button class="btn" type="button" id="button-addon2">Gửi ngay</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-middle">
+            <div class="container px-3">
+                <div class="row">
+                    <div class="col-lg-1 col-md-1 col-sm-1"></div>
+                    <div class="col-lg-10 col-md-10 col-sm-10">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <nav class="navbar">
+                                    <div class="container">
+                                        <h6>Trải Nghiệm VANS Store Ngay Tại Nhà</h6>
+                                        <ul class="navbar-nav w-100">
+                                            <li class="nav-item ">
+                                                <a class="nav-link" href="#">Hệ Thống VANS Online</a>
+                                            </li>
+                                            <li class="nav-item ">
+                                                <a class="nav-link" href="#">Địa chỉ: Hồ Chí Minh</a>
+                                            </li>
+                                            <li class="nav-item ">
+                                                <a class="nav-link" href="#">Hotline: 0866956907</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </nav>
+
+
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                        <nav class="navbar">
+                                            <div class="container">
+                                                <h6>Chính Sách</h6>
+
+                                                <ul class="navbar-nav w-100">
+                                                    <li class="nav-item ">
+                                                        <a class="nav-link" href="#">Chính sách thanh toán</a>
+                                                    </li>
+                                                    <li class="nav-item ">
+                                                        <a class="nav-link" href="#">Chính sách đổi trả</a>
+                                                    </li>
+                                                    <li class="nav-item ">
+                                                        <a class="nav-link" href="#">Chính sách bảo hành</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                        <nav class="navbar">
+                                            <div class="container">
+                                                <h6>Về Chúng Tôi</h6>
+
+                                                <ul class="navbar-nav w-100">
+                                                    <li class="nav-item ">
+                                                        <a class="nav-link" href="#">About Us</a>
+                                                    </li>
+                                                    <li class="nav-item ">
+                                                        <a class="nav-link" href="#">Size Chart</a>
+                                                    </li>
+                                                    <li class="nav-item ">
+                                                        <a class="nav-link" href="#">ZALO Business: 0866956907</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-sm-1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row tablet">
+                    <div id="copyright" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 a-center fot_copyright">
+                        <span class="text-none">
+                            <span class="mobile">&copy; Bản quyền thuộc về <b>VANS Việt Nam</b><span class="hidden-xs">
+                                    |
+                                </span></span>
+                            <span class="opacity1">Cung cấp bởi</span>
+                            <a href="#" previewlistener="true">VANS</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+<script src="js/main.js"></script>
+<script>
+    app.controller('ctrlDetailPage', function ($scope, $http) {
+        $scope.sizes = [
+            { label: '27', value: '27' },
+            { label: '28', value: '28' },
+            { label: '29', value: '29' },
+            { label: '30', value: '30' },
+            { label: '31', value: '31' },
+            { label: '32', value: '32' },
+            { label: '33', value: '33' },
+            { label: '34', value: '34' },
+            { label: '35', value: '35' },
+            { label: '36', value: '36' },
+            { label: '37', value: '37' },
+            { label: '38', value: '38' },
+            { label: '39', value: '39' },
+            { label: '40', value: '40' },
+            { label: '41', value: '41' },
+            { label: '42', value: '42' },
+            { label: '43', value: '43' },
+            { label: '44', value: '44' }
+        ];
+        $scope.classic = [];
+        // Gọi API sử dụng $http
+        $http.get('http://localhost:3000/top-product')
+            .then(function (response) {
+                // Xử lý dữ liệu từ API
+                $scope.top_product = response.data;
+                console.log($scope.top_product)
+            })
+            .catch(function (error) {
+                // Xử lý lỗi nếu có
+                console.error('Lỗi khi tải dữ liệu(top_product):', error);
+            });
+       
+    });
+</script>
+<script>
+    function click_img(image) {
+        var img_focus = document.getElementById('main-img');
+        img_focus.src = image.src;
+    }
+</script>
+
+</html>
+<div class="modal fade" id="modal-checkout" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h6 class="modal-title" id="exampleModalLabel">Thêm vào giỏ thành công</h6>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="">
+                    <div class="row row-noGutter">
+                        <div class="col-6">Sản phẩm
+
+                        </div>
+                        <div class="col-6">
+                            Tổng tiền:
+                        </div>
+
+                </form>
+            </div>
+            </form>
+            <div class="modal-footer">
+                <div class="p-2">
+                    <button class="custom-btn btn-5"><span>Tới giỏ hàng</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

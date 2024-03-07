@@ -1,0 +1,119 @@
+.page-product * {
+   
+    font-family: "Product Sans" !important;
+    text-transform: none;
+}
+
+.select-type {
+    width: calc(100% / 5);
+    padding-left: 0;
+}
+
+.select-type .dropdown-menu .dropdown-item,
+.select-type .dropdown-menu,
+.select-type .dropdown button {
+    border-radius: 0;
+    width: 100%;
+    background-color: #fff;
+    color: black;
+    border: 1px solid rgb(224, 224, 224);
+    box-shadow: none;
+}
+.select-type .dropdown-menu .dropdown-item:hover{
+    color: #ffffff;
+    background-color: #e1182c;
+}
+
+
+
+.card {
+    border: 1px solid rgb(242, 242, 242);
+    border-radius: 0;
+    box-shadow: 0.4px 0.3px 0.2px rgb(243, 240, 240);
+    position: relative;
+}
+
+.pagination li {
+    margin: auto 5px;
+
+}
+
+.pagination li a {
+    padding: 7px 15px;
+    border-radius: 0 !important;
+}
+
+.page-link:hover,
+.active>.page-link {
+    background-color: #e1182c !important;
+    border: 1px solid #e1182c;
+    color: #fff !important;
+
+}
+
+@media screen and (max-width: 576px) {
+    .hide {
+        display: none !important;
+    }
+    .img-banner{
+        margin-bottom: 40px;
+    }
+    .block {
+        display: block !important;
+        color: #fff ;
+        background: #e1182c;
+        position: fixed;
+        right: 0;
+        top: 40% !important;
+        padding: 4px 7px;
+        cursor: pointer;
+        z-index: 9999;
+        font-size: 18px;
+        -webkit-transition: all 0.35s ease;
+        -o-transition: all 0.35s ease;
+        transition: all 0.35s ease;
+    }
+}
+option{
+    min-width: 50px !important;
+}
+/* Định dạng phần chọn option */
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  /* Tùy chỉnh giao diện của các option */
+  option {
+    font-size: 14px;
+    background-color: #fff;
+    color: #333;
+    padding: 8px;
+  }
+  
+  /* Tùy chỉnh khi hover trên option */
+
+  
+  /* Tùy chỉnh khi option được chọn */
+  option:checked {
+    background-color: #e1182c;
+    color: #fff;
+  }
+
+  
+/* Thiết lập phần label */
+.select-type label {
+    display: block;
+    margin-top: 5px;
+    font-size: 16px;
+    color: #555;
+  }
+  .select-type{
+    padding: 10px;
+  }

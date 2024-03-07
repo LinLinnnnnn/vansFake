@@ -1,0 +1,40 @@
+.evo_account_content{
+    padding: 0 !important;
+}
+td>img{
+    width: 100%;
+    object-fit: cover; 
+}
+.evo_account_content>.auth_block>li a:hover{
+    color: #b5313a;
+}
+.evo_account_content>.auth_block>li>.active{
+    color: black !important;
+    font-weight: 600;
+    position: relative;
+}
+.evo_account_content>.auth_block>li>.active::after{
+    content: "";
+    position: absolute;
+    height: 1px;
+    background-color: #b5313a;
+    width: auto;
+    left: 30px;
+    right: 30px;
+    bottom: 0;
+}
+td > button{
+    font-size: 13px !important;
+    border-radius: 0 !important;
+    background-color: rgb(16, 16, 126) !important;
+    color: white !important;
+    font-weight: 500;
+}
+td > button+button{
+    background-color: #b5313a !important;
+}
+@media screen and (min-width: 992px){
+    #customer_login{
+        padding: 20px 200px !important;
+    }
+}

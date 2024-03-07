@@ -1,0 +1,207 @@
+.page_login{
+    background: white;
+    box-shadow: 0 0 10px rgba(204,204,204,0.3);
+}
+.account_banner{
+    background: #f4f5f6 url(/img/account-banner.webp);
+    background-repeat: no-repeat;
+    padding: 370px 20px 30px 20px;
+}
+.account_banner>.account_policy_title{
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.account_banner>.account_policy_content p{
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 7px;
+    font-size: 13px;
+    line-height: 1.3;
+}
+.account_banner>.account_policy_content p::before{
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: url(/img/account_policy_icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; 
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.evo_account_content>.auth_block{
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    height: 50px;
+    border-bottom: 1px solid #eee;
+    margin: 0;
+    min-width: 100%;
+}
+.evo_account_content>.auth_block>li{
+    flex: 1 1;
+    position: relative;
+    border-right: 1px solid #eee;
+}
+.evo_account_content>.auth_block>li+li{
+    border-right: 0;
+}
+.evo_account_content>.auth_block>li a{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    color: #999;
+}
+.evo_account_content>.auth_block>li a:hover{
+    color: #b5313a;
+}
+.evo_account_content>.auth_block>.active a{
+    color: black !important;
+    font-weight: 600;
+}
+.evo_account_content>.auth_block>.active::after{
+    content: "";
+    position: absolute;
+    height: 1px;
+    background-color: #b5313a;
+    width: auto;
+    left: 30px;
+    right: 30px;
+}
+#customer_login{
+    padding: 20px;
+}
+.form_group .form-label{
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+.form_group{
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+}
+.form_group + .form_group{
+    margin-bottom: 0;
+}
+.form-label .required{
+    color: red;
+    font-size: 13px;
+}
+.form-error{
+    color: red;
+    font-size: 12px;
+}
+.page_login input[type="email"], .page_login input[type="password"], .page_login input[type="text"]{
+    background: #fff;
+    height: 40px;
+    padding: 0 15px;
+    border: 1px solid #e1e1e1;
+    outline: none;
+    box-shadow: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.page_login input[type="file"]{
+    box-shadow: none !important;
+}
+textarea{
+    padding: 10px 15px !important;
+    outline: none;
+    box-shadow: none !important;
+    border-radius: 4px;
+    font-size: 14px !important;
+    border: 1px solid #e1e1e1 !important;
+}
+.forget_pass{
+    font-size: 13px;
+    color: #b5313a;
+    text-align: right;
+    display: block;
+}
+.btn_login{
+    background-color: #b5313a;
+    color: white;
+    text-transform: uppercase;
+    font-size: 13px;
+    height: 40px;
+    font-weight: 500;
+    width: 100%;
+    letter-spacing: 1.2px;
+    border-radius: 4px;
+    outline: none;
+    border: 0;
+}
+.btn_login:hover{
+    background-color: #992931;
+}
+.login_note{
+    text-align: center;
+    line-height: 1.1;
+    font-size: 12px;
+    color: #999;
+    margin-top: 10px;
+}
+.evo_login>.line_break{
+    width: 100%;
+    margin: 0 auto 20px;
+    position: relative;
+    text-align: center;
+}
+.evo_login>.line_break::before{
+    content: "";
+    position: absolute;
+    height: 1px;
+    background-color: #eee;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    z-index: 1;
+}
+.evo_login>.line_break>span{
+    display: inline-block;
+    font-size: 13px;
+    color: #999;
+    padding: 1px 10px;
+    border: 1px solid #eee;
+    border-radius: 15px;
+    position: relative;
+    z-index: 1;
+    background-color: white;
+}
+.social_login{
+    padding-bottom: 20px;
+}
+.social_login a{
+    display: inline-block;
+    min-width: 140px;
+}
+.social_login a:hover{
+    opacity: 0.8;
+    transition: 0.3s;
+}
+.social_login a img{
+    max-width: 100%;
+    width: 129px;
+}
+.social_login a+a{
+    margin-left: 10px;
+}
+@media screen and (max-width: 767px){
+    .page_login{
+        overflow: hidden;
+    }
+}
+@media screen and (min-width: 768px){
+    .evo_account_content{
+        padding-left: 0;
+    }
+}

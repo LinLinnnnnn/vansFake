@@ -1,0 +1,139 @@
+body {
+  font-family: "Product Sans";
+    font-size: 14px;
+    padding: 8px;
+    font-weight: 100;
+    text-decoration: none;
+
+  }
+  
+  * {
+    box-sizing: border-box;
+    border-radius: 0 !important;
+  }
+  option{
+    border-radius: 0 !important;
+
+  }
+  
+  .container {
+    background-color: rgb(255, 255, 255);
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+  }
+
+  span.price {
+    float: right;
+    color: #e11227;
+  }
+  
+  
+  form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 65%;
+    background: #f1f1f1;
+  }
+  
+  form.example button {
+    float: left;
+    width: 30%;
+    padding: 10px;
+  
+    margin-left: 5%;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+  }
+  
+  form.example button:hover {
+    background: #0b7dda;
+  }
+  
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+ 
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+  @media (max-width: 900px) {
+    .row.row-re{
+      flex-direction: column-reverse;
+    }
+    /* .col-25 {
+      margin-bottom: 20px;
+    } */
+  }
+  
+.custom-btn {
+
+  color: #fff;
+  border-radius: 0px;
+  padding: 20px 15px;
+  font-weight: 100;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+      7px 7px 20px 0px rgba(0, 0, 0, .1),
+      4px 4px 5px 0px rgba(0, 0, 0, .1);
+  outline: none;
+}
+
+.btn-5 {
+  font-size: 16px;
+  text-transform: none;
+  margin-bottom: 5px;
+  width: 160px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0;
+  border: none;
+  background: #e1182c;
+  background: linear-gradient(0deg, rgb(255, 0, 0) 0%, #e1182c 0%, #e1182c 100%);
+}
+
+.btn-5:hover {
+  color: #f0094a;
+  background: transparent;
+  box-shadow: none;
+}
+
+.btn-5:before,
+.btn-5:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: #f0094a;
+  box-shadow:
+      -1px -1px 5px 0px #fff,
+      7px 7px 20px 0px #0003,
+      4px 4px 5px 0px #0002;
+  transition: 400ms ease all;
+}
+
+.btn-5:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+
+.btn-5:hover:before,
+.btn-5:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
+}

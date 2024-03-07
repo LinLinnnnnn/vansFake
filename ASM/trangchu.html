@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrlMain">
+  <div class="offcanvas offcanvas-start " tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header ">
+      <div class="offcanvas-title text-white" id="offcanvasExampleLabel"><a href="trangchu.html"></a></div>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body bg-dark p-0 w-100 ">
+      <nav class="navbar">
+        <div class="container">
+          <ul class="navbar-nav w-100" id="accordion">
+            <li class="nav-item ">
+              <a class="nav-link" href="#">all vans</a>
+            </li>
+            <li class="nav-item position-relative">
+              <a class="nav-link">Shoes</a>
+              <span class="open" data-bs-toggle="collapse" href="#demo1"><i class="bi bi-plus-lg"></i></span>
+              <ul class="dropdown-menu" id="demo1" class="collapse" data-bs-parent="#accordion">
+                <li><a class="dropdown-item" href="#">Link</a></li>
+                <li><a class="dropdown-item" href="#">Another link</a></li>
+                <li><a class="dropdown-item" href="#">A third link</a></li>
+              </ul>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="#">New arrivals</a>
+            </li>
+            <li class="nav-item position-relative">
+              <a class="nav-link">Accessories</a>
+              <span class="open" data-bs-toggle="collapse" href="#demo2"><i class="bi bi-plus-lg"></i></span>
+              <ul class="dropdown-menu" id="demo2" class="collapse" data-bs-parent="#accordion">
+                <li><a class="dropdown-item" href="#">Link</a></li>
+                <li><a class="dropdown-item" href="#">Another link</a></li>
+                <li><a class="dropdown-item" href="#">A third link</a></li>
+              </ul>
+            </li>
+            <li class="nav-item position-relative">
+              <a class="nav-link">Collections</a>
+              <span class="open" data-bs-toggle="collapse" href="#demo3"><i class="bi bi-plus-lg"></i></span>
+              <ul class="dropdown-menu" id="demo3" class="collapse" data-bs-parent="#accordion">
+                <li><a class="dropdown-item" href="#">Link</a></li>
+                <li><a class="dropdown-item" href="#">Another link</a></li>
+                <li><a class="dropdown-item" href="#">A third link</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sale off</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">size chart</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">LATEST VANS NEWS</a>
+            </li>
+
+          </ul>
+        </div>
+      </nav>
+
+    </div>
+  </div>
+  <header>
+    <div class="top-bar bg-dark">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7 col-md-7 col-sm-7 col-1">
+            <div class="left-bar float-left">
+              <ul class="nav">
+                <li class="nav-item ">
+                  <a class="nav-link" href="#">mylinh.khanhhung@gmail.com</a>
+                </li>
+                <li class="nav-item ">
+                  <p class="nav-link nav-link-disabled text-white  ">/</p>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link " href="#">0889456201</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-5 col-md-5 col-sm-5 col-11">
+            <div class="right-bar">
+              <ul class="nav ">
+                <li class="nav-item ">
+                  <a class="nav-link " href="dangki.html">Đăng ký</a>
+                </li>
+                <li class="nav-item ">
+                  <p class="nav-link nav-link-disabled text-white">/</p>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link " href="dangnhap.html">Đăng nhập</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-header">
+      <div class="container">
+        <div class="row ">
+          <nav class="navbar">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+              <a class="navbar-brand" href="trangchu.html">
+                <img src="img/logo.webp" alt="">
+              </a>
+            </div>
+            <div class="col-lg-7 col-md-7 col-sm-3 col-3">
+              <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                  <div class="row ">
+                    <nav class="navbar navbar-expand-lg position-relative ">
+                      <button class="navbar-toggler text-end position-absolute " type="button" data-toggle="collapse"
+                        data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                        aria-label="Toggle navigation">
+
+                        <a class="btn" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                          aria-controls="offcanvasExample">
+                          <span class="navbar-toggler-icon"> </span></a>
+                      </button>
+
+                      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                        <ul class="navbar-nav mr-auto nav-main flex-wrap justify-content-center">
+                          <li class="nav-item">
+                            <a class="nav-link" href="#"><span>all vans</span></a>
+                          </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown"><span>Shoes</span>
+                              <i class="bi bi-caret-down-fill"></i></a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">VANS CLASSIC </a></li>
+                              <li><a class="dropdown-item" href="#">VANS VAULT </a></li>
+                              <li><a class="dropdown-item" href="#">VANS OLD SKOOL</a></li>
+                              <li><a class="dropdown-item" href="#">VANS SLIP-ON</a></li>
+                              <li><a class="dropdown-item" href="#">VANS AUTHENTIC</a></li>
+                              <li><a class="dropdown-item" href="#">VANS SK8</a></li>
+                              <li><a class="dropdown-item" href="#">VANS ERA </a></li>
+                            </ul>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link " href="#"><span>New arrivals</span></a>
+                          </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
+                              <span>Accessories</span>
+                              <i class="bi bi-caret-down-fill"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">BACKPACK </a></li>
+                              <li><a class="dropdown-item" href="#">VANS WALLET </a></li>
+                            </ul>
+                          </li>
+
+                          <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" role="button"
+                              data-bs-toggle="dropdown"><span>Collections</span>
+                              <i class="bi bi-caret-down-fill"></i></a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">CLASSIC </a></li>
+                              <li><a class="dropdown-item" href="#">CHECKERBOARD </a></li>
+                              <li><a class="dropdown-item" href="#">KNU SKOOL </a></li>
+                              <li><a class="dropdown-item" href="#">VANS VR3 </a></li>
+                              <li><a class="dropdown-item" href="#">VANS FLORAL </a></li>
+                            </ul>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link " href="#"><span>Sale off</span></a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link " href="#"><span>size chart</span></a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link " href="#"><span>About us</span></a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link " href="#"><span>LATEST VANS NEWS</span></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-3 col-3">
+              <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                  <div class=" group-cart d-flex justify-content-end d-inline">
+
+                    <div ng-controller="boxSearchCtrl">
+                      <div class="search-container" ng-mouseenter="showSearchBox = true"
+                        ng-mouseleave="showSearchBox = false">
+                        <i class="bi bi-search" style="font-size: 20px; width: 100%;"></i>
+                        <div ng-show="showSearchBox" class="search-box">
+                          <input type="text" placeholder="Tìm kiếm..." class="text-lowercase">
+                          <!-- Các phần tử khác của box tìm kiếm nếu cần -->
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="search-container" ng-mouseenter="showSearchBox = true"
+                      ng-mouseleave="showSearchBox = false">
+                      <a href="#" alt="">
+                        <i class="bi bi-bag-fill position-relative" style="font-size: 20px;">
+                          <span
+                            class="position-absolute top-0 start-100 p-1 translate-middle  bg-danger border border-light rounded-circle text-white"
+                            style="font-size: 10px;">
+                            3
+                            <span class="visually-hidden"></span>
+                          </span>
+
+                        </i>
+                        <div ng-show="showSearchBox" class="search-box cart-box">
+                          <div class="cart-gr">
+                            <div class="cart-product" ng-repeat="pr in cart">
+                              <div class="m-1 row">
+                                <div class="col-5">
+                                  <img src="img/{{pr.image}}" alt="Product Image">
+                                </div>
+                                <div class="col-7">
+                                  <div class="cart-product-info ">
+                                    <p>{{pr.name}}</p>
+                                    <div class="cart-product-price text-danger">
+                                      {{pr.price -(pr.price * pr.discount / 100)
+                                      | number:0}}₫&nbsp;
+                                    </div>
+                                    <div class="cart-product-quantity">
+                                      <div class="quantity-input">
+                                        <button class="quantity-btn" ng-click="decreaseQuantity(pr)">-</button>
+                                        <input type="" id="quantity" name="quantity" class="quantity" min="1"
+                                          value="{{pr.quantity}}">
+                                        <button class="quantity-btn" ng-click="increaseQuantity(pr)">+</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <hr>
+
+                            <div class="cart-product-total-price d-flex justify-content-between">
+                              <span style="text-transform: none !important; font-weight: 600;">Tổng cộng:</span>
+                              <span class="total-price" style="padding-right: 10px;">{{ calculateTotal() | number:0
+                                }}₫</span>
+                            </div>
+                            <div class="cart-product-actions">
+                              <button class="btn-delete">Giỏ hàng </button>
+                              <button class="btn-update">Thanh toán</button>
+                            </div>
+
+
+                          </div>
+                        </div>
+                        <div class="text-lowercase" ng-show="false">Không có sản phẩm trong vỏ</div>
+                        <!-- Các phần tử khác của box tìm kiếm nếu cần -->
+                    </div>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+        </div>
+
+
+      </div>
+    </div>
+    </div>
+  </header>
+
+  <div class="banner">
+    <div class="container-fluid container-banner">
+      <div class="row">
+
+        <!-- Carousel -->
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+          <!-- Indicators/dots -->
+          <div class="carousel-indicators ">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active "></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+          </div>
+
+          <!-- The slideshow/carousel -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/slider_6.webp" alt="Los Angeles" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+              <img src="img/slider_4.webp" alt="Chicago" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+              <img src="img/slider_1.webp" alt="New York" class="d-block w-100">
+            </div>
+          </div>
+
+          <!-- Left and right controls/icons -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon rounded-circle bg-dark "></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon rounded-circle bg-dark"></span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div ng-controller="myCtrl">
+    <section class="product-classic">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12 ps-0 ">
+            <div class="classic-bg">
+              <h2>
+                <a href="" class="text-white">classic</a>
+              </h2>
+              <span>Bộ sưu tập cổ điển<br>Những phiên bản bất tử<br>từ năm 1966</span>
+              <button type="button" class="btn btn-outline-light text-white">Xem Thêm</button>
+            </div>
+          </div>
+
+
+          <div class="col-lg-9 col-md-8 col-sm-6 col-12">
+            <div class="container bg-body-tertiary p-0">
+              <div id="testimonialCarousel" class="carousel">
+                <div class="carousel-inner inner-scroll">
+                  <div class="carousel-item"
+                    ng-repeat="pr in classic.slice(currentClassicGroupIndex * 3, (currentClassicGroupIndex + 1) * 3)"
+                    ng-class="{active: $index === 0}">
+                    <div class="card shadow-sm">
+                      <div class="sale-right" ng-hide="{{pr.discount}} == 0">{{pr.discount}}%</div>
+                      <img src="img/{{pr.image}}" class="d-block w-100" alt="...">
+                      <button type="button" class="btn btn-detail">Tùy chọn</button>
+                      <div class="card-body">
+                        <div class="box-img d-flex">
+                          <div class="picture-mini ">
+                            <img src="img/{{pr.images[0]}}" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="picture-mini">
+                            <img src="img/{{pr.images[1]}}" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="picture-mini">
+                            <img src="img/{{pr.images[2]}}" class="d-block w-100" alt="...">
+                          </div>
+                        </div>
+                        <h5 class="card-title text-truncate text-center name"><a href="">{{pr.name | uppercase}}</a>
+                        </h5>
+                        <p class="card-text text-center brand"><a href="">Vans</a></p>
+                        <p class="card-text text-center price text-truncate">{{pr.price -(pr.price * pr.discount / 100)
+                          | number:0}}₫&nbsp; <span class="text-decoration-line-through text-black">{{pr.price |
+                            currency : "" :0}}₫ </span> </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+                  data-bs-slide="prev" ng-click="updateCurrentClassicGroupIndex(currentClassicGroupIndex - 1)"
+                  ng-disabled="!canShowPreviousClassicGroup()">
+                  <span class="carousel-control-prev-icon  testimonialCarousel-pre" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+                  data-bs-slide="next" ng-click="updateCurrentClassicGroupIndex(currentClassicGroupIndex + 1)"
+                  ng-disabled="!canShowNextClassicGroup()">
+                  <span class="carousel-control-next-icon testimonialCarousel-next" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="product-new">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12 ps-0 ">
+            <div class="classic-bg new-bg">
+              <h2>
+                <a href="" class="text-white text-nowrap">new arrival</a>
+              </h2>
+              <span>Bộ sưu tập cổ điển<br>Những phiên bản bất tử<br>từ năm 1966</span>
+              <button type="button" class="btn btn-outline-light text-white">Xem Thêm</button>
+            </div>
+          </div>
+
+          <div class="col-lg-9 col-md-8 col-sm-6 col-12">
+            <div class="container bg-body-tertiary p-0">
+              <div id="testimonialCarousel" class="carousel">
+                <div class="carousel-inner inner-scroll">
+                  <div class="carousel-item"
+                    ng-repeat="pr in new_arrivals.slice(currentClassicGroupIndex1 * 3, (currentClassicGroupIndex1 + 1) * 3)"
+                    ng-class="{active: $index === 0}"">
+                    <div class=" card shadow-sm">
+                    <div class="sale-right" ng-hide="{{pr.discount}} == 0">{{pr.discount}}%</div>
+                    <img src="img/{{pr.image}}" class="d-block w-100" alt="...">
+                    <button type="button" class="btn btn-detail">Tùy chọn</button>
+                    <div class="card-body">
+                      <div class="box-img d-flex">
+                        <div class="picture-mini ">
+                          <img src="img/{{pr.images[0]}}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="picture-mini">
+                          <img src="img/{{pr.images[1]}}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="picture-mini">
+                          <img src="img/{{pr.images[2]}}" class="d-block w-100" alt="...">
+                        </div>
+                      </div>
+                      <h5 class="card-title text-truncate text-center name"><a href="">{{pr.name | uppercase}}</a>
+                      </h5>
+                      <p class="card-text text-center brand"><a href="">Vans</a></p>
+                      <p class="card-text text-center price text-truncate">{{pr.price -(pr.price * pr.discount / 100)
+                        | number:0}}₫&nbsp; <span class="text-decoration-line-through text-black">{{pr.price |
+                          currency : "" :0}}₫ </span> </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+                data-bs-slide="prev" ng-click="updateCurrentClassicGroupIndex1(currentClassicGroupIndex1 - 1)"
+                ng-disabled="!canShowPreviousClassicGroup1()">
+                <span class="carousel-control-prev-icon  testimonialCarousel-pre" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+                data-bs-slide="next" ng-click="updateCurrentClassicGroupIndex1(currentClassicGroupIndex1 + 1)"
+                ng-disabled="!canShowNextClassicGroup1()">
+                <span class="carousel-control-next-icon testimonialCarousel-next" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+  </div>
+  </section>
+
+  </div>
+
+  <section class="vans-new">
+    <div class="container">
+      <h2 class="title-head text-center pb-3" title="LATEST VANS NEWS">
+        <a href="#">LATEST VANS NEWS
+        </a>
+      </h2>
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-12">
+          <div class="full-card">
+            <div class="card new-card text-center">
+              <div class="box-img position-relative">
+                <img src="img/g5.webp" alt="">
+                <div class="time-who ">
+                  <i class="bi bi-calendar"></i>
+                  <b class="time-new">17/1/2024</b>&nbsp; Đăng bởi:
+                  <b class="who-new">Dư Trọng Nhân</b>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="card-title">
+                  <a href="#">CONCEPTS X VAULT BY VANS SMOKE AND MIRRORS</a>
+                </div>
+                <div class="card-text">
+                  <p>Concepts&nbsp;và&nbsp;Vault VANS&nbsp;ã hợp tác một lần nữa, lần này cả hai cho ra mắt gói “Smoke
+                    and
+                    Mirrors” - bao gồm các mẫu kiểu dáng màu... </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6">
+          <div class="full-card">
+            <div class="card new-card text-center">
+              <div class="box-img position-relative">
+                <img src="img/g4.webp" alt="">
+                <div class="time-who">
+                  <i class="bi bi-calendar"></i>
+                  <b class="time-new">13/1/2024</b>&nbsp; Đăng bởi:
+                  <b class="who-new">Bùi Huyên Anh</b>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="card-title ">
+                  <a href="#">FEATURE X VANS VAULT OLD SKOOL “DOUBLE DOWN”</a>
+                </div>
+                <div class="card-text">
+                  <p>Concepts&nbsp;và&nbsp;Vault VANS&nbsp;để tạo ra bộ sưu tập giày đầy ấn tượng ghi danh tham gia
+                    “Double Down Sinner's Club”. Sau khi phát hành gói “Sinner's Club” nổi loạn...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-lg-4 col-md-4 col-sm-6">
+          <div class="full-card">
+            <div class="card new-card text-center">
+              <div class="box-img position-relative">
+                <img src="img/g6.webp" alt="">
+                <div class="time-who">
+                  <i class="bi bi-calendar"></i>
+                  <b class="time-new">15/1/2024</b>&nbsp; Đăng bởi:
+                  <b class="who-new">Mai Thị Mỹ Linh</b>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="card-title d-flex">
+                  <a href="#">GIỚI THIỆU MẪU HỢP TÁC KỶ NIỆM 3 NĂM THÀNH LẬP VANS STORE HARAJUKU</a>
+                </div>
+                <div class="card-text">
+                  <p>Concepts&nbsp;và&nbsp;Vault VANS&nbsp; đang rục rịch phát hành bộ sưu tập hợp tác mới nhất của
+                    mình,
+                    lần này là với nghệ sĩ Nhật Bản Hiroyuki Uemura... </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+
+  </section>
+
+  <footer class="mt-5">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="box-email">
+              <h3>Nhập email</h3>
+              <span>Để nhận tin tức khuyến mãi từ cửa hàng của chúng tôi</span>
+            </div>
+            <div class="input-group mb-3">
+              <input type="email" class="form-control input-email" placeholder="Nhập email"
+                aria-label="Nhập email của bạn" aria-describedby="button-addon2">
+              <button class="btn" type="button" id="button-addon2">Gửi ngay</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-middle">
+      <div class="container px-3">
+        <div class="row">
+          <div class="col-lg-1 col-md-1 col-sm-1"></div>
+          <div class="col-lg-10 col-md-10 col-sm-10">
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-12">
+                <nav class="navbar">
+                  <div class="container">
+                    <h6>Trải Nghiệm VANS Store Ngay Tại Nhà</h6>
+                    <ul class="navbar-nav w-100">
+                      <li class="nav-item ">
+                        <a class="nav-link" href="#">Hệ Thống VANS Online</a>
+                      </li>
+                      <li class="nav-item ">
+                        <a class="nav-link" href="#">Địa chỉ: Hồ Chí Minh</a>
+                      </li>
+                      <li class="nav-item ">
+                        <a class="nav-link" href="#">Hotline: 0866956907</a>
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
+
+
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="row">
+                  <div class="col-lg-6 col-md-6 col-sm-12">
+                    <nav class="navbar">
+                      <div class="container">
+                        <h6>Chính Sách</h6>
+
+                        <ul class="navbar-nav w-100">
+                          <li class="nav-item ">
+                            <a class="nav-link" href="#">Chính sách thanh toán</a>
+                          </li>
+                          <li class="nav-item ">
+                            <a class="nav-link" href="#">Chính sách đổi trả</a>
+                          </li>
+                          <li class="nav-item ">
+                            <a class="nav-link" href="#">Chính sách bảo hành</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </nav>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12">
+                    <nav class="navbar">
+                      <div class="container">
+                        <h6>Về Chúng Tôi</h6>
+
+                        <ul class="navbar-nav w-100">
+                          <li class="nav-item ">
+                            <a class="nav-link" href="#">About Us</a>
+                          </li>
+                          <li class="nav-item ">
+                            <a class="nav-link" href="#">Size Chart</a>
+                          </li>
+                          <li class="nav-item ">
+                            <a class="nav-link" href="#">ZALO Business: 0866956907</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-1 col-md-1 col-sm-1"></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row tablet">
+          <div id="copyright" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 a-center fot_copyright">
+            <span class="text-none">
+              <span class="mobile">&copy; Bản quyền thuộc về <b>VANS Việt Nam</b><span class="hidden-xs"> |
+                </span></span>
+              <span class="opacity1">Cung cấp bởi</span>
+              <a href="#" previewlistener="true">VANS</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+</body>
+<script src="js/main.js"></script>
+<script>
+  app.controller('myCtrl', function ($scope, $http) {
+    $scope.classic = [];
+    // Gọi API sử dụng $http
+    $http.get('http://localhost:3000/classic')
+      .then(function (response) {
+        // Xử lý dữ liệu từ API
+        $scope.classic = response.data;
+        console.log($scope.classic)
+      })
+      .catch(function (error) {
+        // Xử lý lỗi nếu có
+        console.error('Lỗi khi tải dữ liệu(classic):', error);
+      });
+    $http.get('http://localhost:3000/new_arrivals')
+      .then(function (response) {
+        // Xử lý dữ liệu từ API
+        $scope.new_arrivals = response.data;
+        console.log($scope.new_arrivals)
+      })
+      .catch(function (error) {
+        // Xử lý lỗi nếu có
+        console.error('Lỗi khi tải dữ liệu(new_arrivals):', error);
+      });
+    $scope.currentClassicGroupIndex = 0;
+
+    // Hàm để cập nhật chỉ số hiện tại
+    $scope.updateCurrentClassicGroupIndex = function (index) {
+      $scope.currentClassicGroupIndex = index;
+    };
+    $scope.canShowNextClassicGroup = function () {
+      return ($scope.currentClassicGroupIndex + 1) * 3 < $scope.classic.length;
+    };
+
+    // Hàm để kiểm tra xem có thể hiển thị nút "Previous" hay không
+    $scope.canShowPreviousClassicGroup = function () {
+      return $scope.currentClassicGroupIndex > 0;
+    };
+
+
+    $scope.currentClassicGroupIndex1 = 0;
+
+    // Hàm để cập nhật chỉ số hiện tại
+    $scope.updateCurrentClassicGroupIndex1 = function (index) {
+      $scope.currentClassicGroupIndex1 = index;
+    };
+    $scope.canShowNextClassicGroup1 = function () {
+      return ($scope.currentClassicGroupIndex1 + 1) * 3 < $scope.classic.length;
+    };
+
+    // Hàm để kiểm tra xem có thể hiển thị nút "Previous" hay không
+    $scope.canShowPreviousClassicGroup1 = function () {
+      return $scope.currentClassicGroupIndex1 > 0;
+    };
+
+  });
+
+
+
+</script>
+
+</html>

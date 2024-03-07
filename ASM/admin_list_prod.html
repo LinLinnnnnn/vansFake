@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Link css bootstrap-->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Link js bootstrap-->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet">
+        <!-- Link icon bootstrap -->
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <!-- Link angularJS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>    
+        <!-- Link css -->
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/login.css">
+        <link rel="stylesheet" href="css/admin.css">
+        <title>Admin</title>
+    </head>
+    <body ng-app="myApp">
+        <div class="container-fluid">
+            <!-- <header>
+                <div class="top_hea_menu">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-3 col-lg-3 d-flex"
+                                style="align-items: center; position: relative;">
+                                <div class="header_action_item">
+                                    <div class="header_action_text d-flex"
+                                        id="menu">
+                                        <a href="#">
+                                            <span class="bi bi-list"></span>
+                                            <span class="icon_text">MENU</span>
+                                        </a>
+                                    </div>
+                                    <div class="header_action_dropdown"
+                                        id="menu_hidden">
+                                        <div class="header_dropdown_content">
+                                            <div class="sitenav_content">
+                                                <div
+                                                    class="sitenav_content_title">
+                                                    <a class="d-flex" href>
+                                                        <i
+                                                            class="bi bi-house-door"></i>
+                                                        <button
+                                                            class="btn btn_close"><i
+                                                                class="bi bi-x-lg"></i></button>
+                                                    </a>
+                                                </div>
+                                                <div
+                                                    class="sitenav_content_block">
+                                                    <div class="mobile_menu">
+                                                        <div
+                                                            class="mobile_menu_inner">
+                                                            <ul
+                                                                class="nav_la_list_items">
+                                                                <li
+                                                                    class="ng_scope"><a
+                                                                        href="#">QUẢN LÝ MẬT KHẨU</a></li>
+                                                                <li
+                                                                    class="ng_scope"><a
+                                                                        href="#">QUẢN LÝ DANH MỤC</a></li>
+                                                                <li
+                                                                    class="ng_scope active"><a
+                                                                        href>QUẢN LÝ SẢN PHẨM</a></li>
+                                                                <li
+                                                                    class="ng_scope"><a
+                                                                        href>QUẢN LÝ BANNER</a></li>
+                                                            </ul>
+                                                            <div
+                                                                class="mobile_menu_help">
+                                                                <p
+                                                                    class="help_title">Bạn
+                                                                    cần hỗ
+                                                                    trợ</p>
+                                                                <div
+                                                                    class="help_item">
+                                                                    <a
+                                                                        class="help_item_link"
+                                                                        href><i
+                                                                            class="bi bi-telephone"></i>
+                                                                        0917561212
+                                                                    </a>
+                                                                </div>
+                                                                <div
+                                                                    class="help_item">
+                                                                    <a
+                                                                        class="help_item_link"
+                                                                        href><i
+                                                                            class="bi bi-envelope-paper"></i>
+                                                                        cpg.customerservice@vtijs.com
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="logo" href="index.html">
+                                    <img src="img/logo.webp" alt>
+                                </a>
+                            </div>
+                            <div class="col-5 col-lg-6 d-flex"
+                                style="align-items: center;">
+                                <div class="input-group">
+                                    <input type="text"
+                                        class="form-control input_search"
+                                        placeholder="Tìm sản phẩm..."
+                                        aria-label="Recipient's username"
+                                        aria-describedby="basic-addon2">
+                                    <button class="input-group-text btn_search"
+                                        id="basic-addon2"><i
+                                            class="bi bi-search"></i></button>
+                                </div>
+                            </div>
+                            <div class="col-4 col-lg-3 d-flex"
+                                style="align-items: center; justify-content: end;">
+                                <a href class="search d-none">
+                                    <span class="bi bi-search"></span>
+                                </a>
+                                <a href="" class="account">
+                                    <span class="bi bi-person-circle"></span>
+                                    <span class="account_text">Tài khoản</span>
+                                </a>
+                                <a href class="account"
+                                    style="margin-left: 15px;">
+                                    <span class="bi bi-box-arrow-right"></span>
+                                    <span class="account_text">Thoát</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header_main_nav">
+                    <div class="container">
+                        <a class="house" href><span
+                                class="bi bi-house-door"></span></a>
+                        <ul class="nav">
+                            <li class="nav-item"><a class="nav-link"
+                                    href="#">MẬT KHẨU</a></li>
+                            <li class="nav-item"><a class="nav-link" href>DANH MỤC</a></li>        
+                            <li class="nav-item active"><a class="nav-link"
+                                    href="#">SẢN PHẨM</a></li>
+                            <li class="nav-item"><a class="nav-link" href>BANNER</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header> -->
+            <div class="container"
+                style="margin-top: 30px; margin-bottom: 20px;" ng-controller="myCtrl">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="page_login">
+                            <div id="login" class="row m-0">
+                                <div
+                                    class="evo_account_content col-lg-12 col-md-12">
+                                    <ul class="auth_block nav-tabs" role="tablist">
+                                        <li><a class="active" href="#table" data-bs-toggle="tab" id="ds_sp">Danh sách sản phẩm</a></li>
+                                        <li><a class="" href="#form" data-bs-toggle="tab">Thêm sản phẩm</a></li>
+                                    </ul>
+                                    <div class="modal" id="myModal">
+                                        <div class="modal-dialog">
+                                          <div class="modal-content">               
+                                            <!-- Modal Header -->
+                                            <div class="modal-header">
+                                              <h4 class="modal-title">Cập nhật sản phẩm</h4>
+                                              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                            </div>                                                 
+                                            <!-- Modal body -->
+                                            <div class="modal-body">
+                                                <form name="form_update">
+                                                    <fieldset class="form_group" style="margin-bottom: 0;">
+                                                        <label class="form-label"
+                                                            for="btn_chooseFile">ẢNH<span class="required">*</span></label> <br>
+                                                        <img class="mb-2" ng-if="prod.img" src="img/{{prod.img}}" alt="" width="20%">  
+                                                        <input class="form-control form-control-sm" id="formFileSm1" required name="formFileSm" 
+                                                        type="file">
+                                                    </fieldset>
+                                                    <fieldset class="form_group">
+                                                        <label class="form-label"
+                                                            for="name_prod">TÊN SẢN PHẨM<span class="required">*</span></label>
+                                                        <input
+                                                            autocomplete="off"
+                                                            placeholder="Nhập Tên sản phẩm"
+                                                            type="text"
+                                                            class="form-control form-control-lg error"
+                                                            value=""
+                                                            required
+                                                            id="name_prod" ng-model="prod.title">
+                                                        <span
+                                                            class="help-block form-error"
+                                                            id="name_prodError"></span>
+                                                    </fieldset>
+                                                    <fieldset class="form_group">
+                                                        <label class="form-label"
+                                                            for="price">GIÁ GỐC<span class="required">*</span></label>
+                                                        <input
+                                                            autocomplete="off"
+                                                            placeholder="Nhập Giá gốc"
+                                                            type="text"
+                                                            class="form-control form-control-lg error"
+                                                            value=""
+                                                            required  
+                                                            id="price" ng-model="prod.price">
+                                                        <span
+                                                            class="help-block form-error"
+                                                            id="priceError"></span>
+                                                    </fieldset>
+                                                </form>
+                                            </div>                                                 
+                                            <!-- Modal footer -->
+                                            <div class="modal-footer">
+                                              <button type="button" class="btn btn-primary" ng-click="update(form_update.$invalid)">Cập nhật</button>  
+                                              <button type="button" id="close" class="btn btn-danger" data-bs-dismiss="modal">Đóng</button>
+                                            </div>                                                 
+                                          </div>
+                                        </div>
+                                    </div>
+                                    <div class="evo_login tab-content">
+                                        <table class="table table-hover tab-pane active" id="table">
+                                            <thead>
+                                              <tr class="table-warning">
+                                                <th class="col-1">STT</th>
+                                                <th class="col-1">Hình</th>
+                                                <th class="col-4">Tên</th>
+                                                <th class="col-2">Giá</th>
+                                                <th class="col-2">Lượt xem</th>
+                                                <th class="col-2">Thao tác</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr ng-repeat="prod in prod_list" class="admin_prod_list">
+                                                <td>{{$index + 1}}</td>
+                                                <td><img src="img/{{prod.img}}" alt=""></td>
+                                                <td>
+                                                    {{prod.title}}
+                                                </td>
+                                                <td>{{prod.price | currency: "" : 0}}đ</td>
+                                                <td>{{prod.view}}</td>
+                                                <td>
+                                                    <button ng-click="edit($index)" class="btn" data-bs-toggle="modal" data-bs-target="#myModal"><i class="bi bi-arrow-repeat"></i> Sửa</button>
+                                                    <button class="btn" ng-click="delete($index)"><i class="bi bi-trash3"></i> Xoá</button>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="tab-pane fade" id="form">
+                                            <form id="customer_login" name="form_add">
+                                                <div class="form_signup_clear">
+                                                    <fieldset class="form_group" style="margin-bottom: 0;">
+                                                        <label class="form-label">ẢNH<span class="required">*</span></label>
+                                                        <input class="form-control form-control-sm" id="formFileSm" required type="file">
+                                                        <span
+                                                            class="help-block form-error"
+                                                            id="formFileSmError"></span>
+                                                    </fieldset>
+                                                    <fieldset class="form_group">
+                                                        <label class="form-label"
+                                                            >DANH MỤC<span class="required">*</span></label>
+                                                        <input
+                                                            autocomplete="off"
+                                                            placeholder="Nhập Danh mục"
+                                                            type="text"
+                                                            class="form-control form-control-lg error"
+                                                            value=""
+                                                            required  
+                                                            id="category">
+                                                        <span
+                                                            class="help-block form-error"
+                                                            id="categoryError"></span>
+                                                    </fieldset>
+                                                    <fieldset class="form_group">
+                                                        <label class="form-label"
+                                                            >TÊN SẢN PHẨM<span class="required">*</span></label>
+                                                        <input
+                                                            autocomplete="off"
+                                                            placeholder="Nhập Tên sản phẩm"
+                                                            type="text"
+                                                            class="form-control form-control-lg error"
+                                                            value=""
+                                                            required
+                                                            id="name_prod1" ng-model="pro.title">
+                                                        <span
+                                                            class="help-block form-error"
+                                                            id="name_prodError1"></span>
+                                                    </fieldset>
+                                                    <fieldset class="form_group">
+                                                        <label class="form-label"
+                                                            >GIÁ GỐC<span class="required">*</span></label>
+                                                        <input
+                                                            autocomplete="off"
+                                                            placeholder="Nhập Giá gốc"
+                                                            type="text"
+                                                            class="form-control form-control-lg error"
+                                                            value=""
+                                                            required  
+                                                            id="price1" ng-model="pro.price">
+                                                        <span
+                                                            class="help-block form-error"
+                                                            id="priceError1"></span>
+                                                    </fieldset>
+                                                    <fieldset class="form_group">
+                                                        <label class="form-label"
+                                                            >GIÁ KHUYẾN MÃI<span class="required">*</span></label>
+                                                        <input
+                                                            autocomplete="off"
+                                                            placeholder="Nhập Giá khuyến mãi"
+                                                            type="text"
+                                                            class="form-control form-control-lg error"
+                                                            value=""
+                                                            required  
+                                                            id="price_km">
+                                                        <span
+                                                            class="help-block form-error"
+                                                            id="price_kmError"></span>
+                                                    </fieldset>
+                                                    <fieldset class="form_group">
+                                                        <label class="form-label"
+                                                            >MÔ TẢ NGẮN<span class="required">*</span></label>
+                                                        <textarea class="form-control" id="moTaNgan" placeholder="Nhập Mô tả" rows="3" required></textarea>
+                                                        <span
+                                                            class="help-block form-error"
+                                                            id="moTaNganError"></span>
+                                                    </fieldset>
+                                                    <fieldset class="form_group">
+                                                        <label class="form-label"
+                                                            >MÔ TẢ CHI TIẾT<span class="required">*</span></label>
+                                                        <textarea class="form-control" id="moTaCT" placeholder="Nhập Mô tả" rows="3" required></textarea>
+                                                        <span
+                                                            class="help-block form-error"
+                                                            id="moTaCTError"></span>
+                                                    </fieldset>
+                                                    <div class="text-center d-flex justify-content-space-between" style="margin-top: 15px;">
+                                                        <button class="btn_login me-2" ng-click="reset()" style="background-color: rgb(16, 16, 126);">HUỶ</button>
+                                                        <button type="submit" class="btn_login ms-2" ng-click="insert(form_add.$invalid)">THÊM SẢN PHẨM</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>
+<script src="js/my_js.js"></script>
+<script src="js/add_prod.js"></script>
+<script src="js/admin_list.js"></script>
+<script>
+    var app = angular.module("myApp", []);
+    app.controller("myCtrl", function($scope, $http){
+        $http.get('http://localhost:3000/admin_list')
+        .then(function(response) {
+            // Xử lý dữ liệu từ API
+            $scope.prod_list = response.data;
+        })
+        .catch(function(error) {
+            // Xử lý lỗi nếu có
+            console.error('Lỗi khi tải dữ liệu:', error);
+        });
+        $scope.prod = {};
+
+        $scope.pro = {};
+
+        $scope.index = -1;
+
+        $scope.$watch('file1', function (newFile) {
+            if (newFile) {
+            // Lấy tên của tệp
+            var fileName = newFile.name;
+
+            // In ra console hoặc làm bất kỳ thứ gì bạn muốn với tên tệp
+            console.log("Selected File Name: " + fileName);
+
+            // Gán tên tệp cho một biến trong $scope để sử dụng trong template AngularJS
+            $scope.prod.img = fileName;
+            }
+        });
+
+        // Lắng nghe sự kiện change trên input type file và cập nhật giá trị của biến 'file'
+        document.getElementById('formFileSm1').addEventListener('change', function (event) {
+            $scope.$apply(function () {
+                $scope.file1 = event.target.files[0];
+            });
+        });    
+
+        $scope.$watch('file', function (newFile) {
+            if (newFile) {
+            // Lấy tên của tệp
+            var fileName = newFile.name;
+
+            // In ra console hoặc làm bất kỳ thứ gì bạn muốn với tên tệp
+            console.log("Selected File Name: " + fileName);
+
+            // Gán tên tệp cho một biến trong $scope để sử dụng trong template AngularJS
+            $scope.pro.img = fileName;
+            }
+        });
+
+        // Lắng nghe sự kiện change trên input type file và cập nhật giá trị của biến 'file'
+        document.getElementById('formFileSm').addEventListener('change', function (event) {
+            $scope.$apply(function () {
+                $scope.file = event.target.files[0];
+            });
+        });
+
+        $scope.edit = function(index){
+            document.getElementById("formFileSm1").value = null;
+            $scope.index = index;
+            $scope.prod = angular.copy($scope.prod_list[index]);
+        };
+        
+        $scope.update = function(check_form) {
+            if(check_form==true){
+                alert("Vui lòng nhập đầy đủ các trường!");
+            }else{
+                if(angular.element(document.querySelectorAll('.form-error')).text()==false){
+                    $scope.prod_list[$scope.index] = angular.copy($scope.prod);
+                    console.log($scope.prod_list[$scope.index]);
+                    document.getElementById("close").click();
+                }else{
+                    alert("Vui lòng nhập đúng cấu trúc!");
+                }    
+            } 
+        };
+
+        $scope.delete = function(index){
+            if(confirm("Bạn có muốn xoá ?")){
+                $scope.prod_list.splice(index, 1);
+            }
+        };
+
+        $scope.insert = function(check_form){
+            if(check_form==true){
+                alert("Vui lòng nhập đầy đủ các trường!");
+            }else{
+                if(angular.element(document.querySelectorAll('.form-error')).text()==false){
+                    $scope.pro.view = 0;
+                    $scope.prod_list.push(angular.copy($scope.pro));
+                    document.getElementById("ds_sp").click();
+                    $scope.reset();
+                }else{
+                    alert("Vui lòng nhập đúng cấu trúc!");
+                }    
+            }              
+        }
+
+        $scope.reset = function(){
+            $scope.pro = {};
+            document.getElementById("formFileSm").value = null;
+            document.getElementById("category").value = null;
+            document.getElementById("price_km").value = null;
+            document.getElementById("moTaNgan").value = null;
+            document.getElementById("moTaCT").value = null;
+        }
+    });
+</script>
