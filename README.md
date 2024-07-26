@@ -1,2 +1,2 @@
 # vansFake
-Front-End anf Framework
+Front-End and Framework
